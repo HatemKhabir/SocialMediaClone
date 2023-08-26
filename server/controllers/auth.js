@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 import jwt  from "jsonwebtoken";
-import User from "../models/User.js"
+import User from "../mongodb/models/User.js"
 //Authentication : when you register and login , Authorization : make sure someone is logged in to perform certain action 
 
 //Register User
@@ -37,7 +37,7 @@ export const register=async(req,res)=>{
         res.status(201).json(savedUser);
 
     }catch(e){
-res.status(500).json({error:err.message});
+res.status(500).json({error:e.message});
     }
 }
 

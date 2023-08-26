@@ -30,6 +30,6 @@ const userSchema=mongoose.Schema({
     impressions:Number
 },{timestamps:true})
 
-const User=mongoose.model("User",userSchema)
+const User=mongoose.model("User",userSchema,"socials")
 
 export default User;
